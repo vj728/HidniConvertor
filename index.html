@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindi Typing Converter | English to Hindi</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body class="light-mode">
+    <div class="container">
+        <header>
+            <h1>🔤 Hindi Typing Converter</h1>
+            <p class="subtitle">Type in English, get instant Hindi transliteration</p>
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <label for="english-input">Type English Text:</label>
+                <textarea id="english-input" placeholder="e.g., 'namaste' = नमस्ते..." rows="4"></textarea>
+                <div id="suggestions" class="suggestions-dropdown"></div>
+            </div>
+
+            <div class="output-section">
+                <label for="hindi-output">Hindi Output:</label>
+                <div id="hindi-output" class="hindi-text"></div>
+            </div>
+
+            <div class="actions">
+                <button id="copy-btn" class="btn-primary">📋 Copy</button>
+                <button id="clear-btn" class="btn-secondary">❌ Clear</button>
+                <button id="download-btn" class="btn-primary">💾 Download</button>
+                <button id="speak-btn" class="btn-accent">🔊 Speak</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 Hindi Typing Converter | Made  by Vijay Barman with ❤️ for Hindi learners</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

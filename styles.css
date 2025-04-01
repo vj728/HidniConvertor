@@ -1,0 +1,275 @@
+:root {
+    --font-primary: 'Poppins', sans-serif;
+    --radius: 12px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* .dark-mode {
+    background-color: #222;
+    color: #f0f0f0;
+} */
+
+.container {
+
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+header{
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--secondary-text);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.input-section, .output-section {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--secondary-text);
+}
+
+textarea, #hindi-output {
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    font-size: 1.1rem;
+    resize: vertical;
+    background: var(--input-bg);
+    color: var(--text-color);
+    box-shadow: var(--shadow);
+}
+
+#hindi-output {
+    min-height: 100px;
+    background: var(--output-bg);
+    overflow-y: auto;
+}
+
+.hindi-text {
+    font-family: 'Noto Sans Devanagari', 'Mangal', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+.suggestions-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 1rem 0;
+    justify-content: center;
+}
+
+.suggestion {
+    
+    color: var(--suggestion-text);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: transform 0.2s;
+}
+
+.suggestion:hover {
+    transform: translateY(-2px);
+    background: var(--suggestion-hover);
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.btn-accent {
+    background: var(--accent-color);
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+
+/* Suggestions Dropdown */
+.suggestions-dropdown {
+    position: absolute;
+    width: auto;
+    max-height: 200px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: none;
+}
+
+.dark-mode .suggestions-dropdown {
+    background: #333;
+    border-color: #444;
+}
+
+.suggestion {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.suggestion:hover {
+    background: #f0f0f0;
+}
+
+.dark-mode .suggestion:hover {
+    background: #444;
+}
+
+#english-input {
+    min-height: 150px;  /* Fixed initial height */
+    max-height: 200px;  /* Maximum height before scrolling */
+    overflow-y: auto;   /* Enable vertical scrollbar if needed */
+    resize: none;       /* Disable manual resize handle */
+}
+#hindi-output {
+    min-height: 150px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+button, .suggestion, textarea, #hindi-output {
+    transition: all 0.2s ease-out;
+}
+
+#english-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(74, 107, 255, 0.2);
+}
+
+
+
+
+
+
+/* Footer */
+
+
+
+
+
+.light-mode {
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --primary-color: #4a6bff;
+    --secondary-color: #6c757d;
+    --accent-color: #20c997;
+    --input-bg: #fff;
+    --output-bg: #f1f3ff;
+    --border-color: #ddd;
+    --suggestion-bg: #e0e5ff;
+    --suggestion-text: #333;
+    --suggestion-hover: #c9d3ff;
+    --secondary-text: #666;
+}
+
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --primary-color: #5e7cff;
+    --secondary-color: #495057;
+    --accent-color: #12b886;
+    --input-bg: #1e1e1e;
+    --output-bg: #2a2a3a;
+    --border-color: #444;
+    --suggestion-bg: #3a3a5a;
+    --suggestion-text: #fff;
+    --suggestion-hover: #4a4a6a;
+    --secondary-text: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    .actions {
+        flex-direction: column;
+    }
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    #english-input, #hindi-output {
+        min-height: 120px;
+        max-height: 150px;
+    }
+}
